@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
  * main - prints out size of various data types used in C
+ * Description: Does as explained.
+ * Return: Always return success.
  */
 int main(void)
 {
