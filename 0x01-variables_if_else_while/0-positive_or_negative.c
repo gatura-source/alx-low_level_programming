@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+/**
+ * main - entry point
+ * Description: Prints status of a random number
+ * Return: Always zero
+ */
+
+int main(void)
+{
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+	{
+		printf("%d is greater than zero\n", n);
+	}
+	else
+	{
+		printf("%d is less than zero\n", n);
+
+	}
+
+	return (0);
+
+}
