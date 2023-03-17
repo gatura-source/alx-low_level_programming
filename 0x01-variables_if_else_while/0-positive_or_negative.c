@@ -17,10 +17,15 @@ int main(void)
 	{
 		printf("%d is greater than zero\n", n);
 	}
-	else
+	else if (n < 0)
 	{
 		printf("%d is less than zero\n", n);
 
+	}
+	else
+	{
+		printf("%d is zero\n", n);
+	
 	}
 
 	return (0);
