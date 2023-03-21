@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * main - RTFC
+ * _abs - RTFC
+ * @num: func input
  * Description: RTFC
  * Return: 0
  */
