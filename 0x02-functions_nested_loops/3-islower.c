@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _islower - like std does
+ * @c: func input
  * Description: checks for lowercase
  * Return: 1 for lowcase, 0 otherwise
  */
@@ -16,5 +17,9 @@ int _islower(int c)
 	{
 		r = 1;
 	}
-	return r;
+	else
+	{
+		r = 0;
+	}
+	return (r);
 }
