@@ -1,12 +1,16 @@
 #include "main.h"
 /**
- * main - entry point
- * Description: prints alphabet to stdout
- * Return: always zero
+ * print_alphabet - as called
+ * Description: as called
+ * Return: 0
  */
-int main (void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	_putchar('\n');
-	return (0);
+	int b;
+
+	for (b = 97; b < 123; b++)
+	{
+		_putchar(b);
+	}
+	_putchar('\n')
 }

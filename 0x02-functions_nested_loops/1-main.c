@@ -1,15 +1,11 @@
 #include "main.h"
 /**
- * print_alphabet - as called
- * Description: as called
- * Return: 0
+ * main - entry point
+ * Description: prints alphabet to stdout
+ * Return: always zero
  */
-void print_alphabet(void)
+int main (void)
 {
-	int b;
-
-	for (b = 97; b < 123; b++)
-	{
-		_putchar(b);
-	}
+	print_alphabet();
+	return (0);
 }
