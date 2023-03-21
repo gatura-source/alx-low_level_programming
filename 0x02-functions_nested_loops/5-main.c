@@ -7,6 +7,7 @@
 int main(void)
 {
 	int r;
+	
 	r = print_sign(98);
     	_putchar(',');
    	_putchar(' ');
