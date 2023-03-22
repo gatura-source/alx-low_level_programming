@@ -2,7 +2,7 @@
 /**
  * main - entry point
  * Description: tests a function
- * Return: 0 on success 1 otherwise
+ * Return: 0
  */
 int main(void)
 {
