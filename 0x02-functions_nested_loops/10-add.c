@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * ad - as the name
+ * add - as the name
+ * @m: func input
+ * @n: func input
  * Description: name
  * Return: add value
  */
