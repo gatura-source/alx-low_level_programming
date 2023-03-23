@@ -13,8 +13,7 @@ void more_numbers(void)
 	int c;
 	int d;
 
-	c = 49;
-	d = 48;
+	
 
 	for (a = 0; a < 10; a++)
 	{
@@ -22,11 +21,7 @@ void more_numbers(void)
 		{
 			_putchar(b);
 		}
-		for (d = 48; d <= 52; d++)
-		{
-			_putchar(c);
-			_putchar(d);
-		}
-		_putchar('\n');
+
+		
 	}
 }
