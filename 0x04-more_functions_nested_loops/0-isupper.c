@@ -7,7 +7,7 @@
  * Return: 1 if uppercase o otherwise
  */
 
-int _uppercase(int c);
+int _isupper(int c)
 {
 	int r;
 
