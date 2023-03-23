@@ -15,7 +15,7 @@ void helper_f(int m)
 	}
 	else
 	{
-		for (i = 1; i <= m; i++)
+		for (i = 0; i < m; i++)
 		{
 			_putchar(32);
 		}
