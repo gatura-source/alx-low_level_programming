@@ -1,26 +1,5 @@
 #include "main.h"
-/**
- * helper_f - helper function for print_diagonal
- * @m: func input
- *
- * Return: void
- */
-void helper_f(int m)
-{
-	int i;
 
-	if (m <= 0)
-	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (i = 0; i < m; i++)
-		{
-			_putchar(32);
-		}
-	}
-}
 /**
  * print_diagonal - prints values diagonal
  * @n: func input
@@ -31,19 +10,26 @@ void helper_f(int m)
 void print_diagonal(int n)
 {
 	int j;
+	int i;
 
-	if (n <= 0)
-	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (j = 1; j <= n; j++)
-		{
-			helper_f(j);
-			_putchar(92);
-			_putchar('\n');
-		}
-	}
+	 j = 0;
+
+	 while (n > 0);
+	 {
+		 i = c;
+		 while (i > 0)
+		 {
+			 _putchar(32);
+			 i--;
+		 }
+		 _putchar(92);
+		 _putchar('\n');
+		 j++;
+		 n--;
+	 }
+	 if (c < 1)
+	 {
+		 _putchar('\n');
+	 }
 }
 
