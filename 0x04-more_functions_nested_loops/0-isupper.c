@@ -3,6 +3,7 @@
 
 /**
  * _isupper - checks character input if uppercase
+ * @c: func input
  * Description: as said above
  * Return: 1 if uppercase o otherwise
  */
@@ -15,7 +16,7 @@ int _isupper(int c)
 	{
 		r = 1;
 	}
-	else if (c >= 97 && c<= 122)
+	else if (c >= 97 && c <= 122)
 	{
 		r = 0;
 	}
