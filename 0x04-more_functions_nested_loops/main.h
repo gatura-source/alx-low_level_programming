@@ -12,5 +12,6 @@ void print_line(int n);
 void print_diagonal(int n);
 void helper_f(int m);
 void fizz_buzz(void);
+void print_square(int size);
 
 #endif
