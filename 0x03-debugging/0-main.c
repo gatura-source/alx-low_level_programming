@@ -1,9 +1,11 @@
 #include "main.h"
+
 /**
  * main - entry point
  * Description: tests a function
  * Return: 0
  */
+
 int main(void)
 {
 	int i = 0;
