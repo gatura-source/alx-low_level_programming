@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * more_numbers - prints 0-14 * 10
@@ -25,6 +26,6 @@ void more_numbers(void)
 				_putchar(b % 10 + '0');
 			}
 		}
-		_putchar('\n');
+		putchar('\n');
 	}
 }
