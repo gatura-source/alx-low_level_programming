@@ -23,8 +23,15 @@ int main(void)
 		}
 		else if (a % 5 == 0 && a % 3 != 0)
 		{
-			printf("Buzz");
-			putchar(32);
+			if (a < 100)
+			{
+				printf("Buzz");
+				putchar(32);
+			}
+			else if (a == 100)
+			{
+				printf("Buzz");
+			}
 		}
 		else
 		{
