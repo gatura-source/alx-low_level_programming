@@ -14,7 +14,6 @@ void print_rev(char *s)
 	int len;
 	int count;
 	int end;
-	char str[strlen(s)];
 
 	len = 0;
 
@@ -22,6 +21,8 @@ void print_rev(char *s)
 	{
 		len++;
 	}
+	
+	char str[len];
 
 
 	end = len - 1;
