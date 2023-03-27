@@ -12,8 +12,7 @@
 void print_rev(char *s)
 {
 	int len;
-	char str[strlen(s)]; /** declaring a string same size as input */
-
+	char str[1];
 	len = 0;
 
 	while(s[len] != '\0')
