@@ -12,26 +12,32 @@ void rev_string(char *s)
 {
 
 	int len;
-	int len_b;
 	int count;
-	int count_2;
+	char *ptr_a;
+	char *ptr_b;
+	char temp;
 
-	len = 0;
-	while (s[len] != '\0')
+
+	ptr_a = s;
+
+	len = strlen(s);
+
+	ptr_b = s + len - 1;
+
+
+	for (count = 0; count < (len - 1) / 2; count++)
 	{
-		len++;
+		temp = *ptr_b;
+		*ptr_b = *ptr_a;
+		*ptr_a = temp;
+
+		ptr_a++;
+		ptr_b--;
 	}
-	char b[len];
 
-	count_2 = len - 1;
 
-	for (count = 0; count < len; count++)
-	{
-		b[count] = s[count_2];
-		count_2--;
-	}
-	b[count] = '\0';
 
-	printf("%s :: %s", s, b);
-	char *temp[len] = &b;
+
+
+
 }
