@@ -24,8 +24,10 @@ void puts_half(char *str)
 		len++;
 	}
 
-	/*printf("%d\n", len_c);
-	printf("%d\n", len);*/
+	/*
+	 * printf("%d\n", len_c);
+	printf("%d\n", len);
+	*/
 
 	if (len % 2 != 0)
 	{
@@ -38,7 +40,9 @@ void puts_half(char *str)
 
 
 	do {
-		/*printf("len_b : %d ---- count : %d\n", len_b, count);*/
+		/*
+		 * printf("len_b : %d ---- count : %d\n", len_b, count);
+		 * */
 		count_a[count] = str[len_b];
 		len_b++;
 		count++;
