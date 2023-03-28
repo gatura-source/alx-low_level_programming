@@ -34,8 +34,8 @@ void puts_half(char *str)
 
 	do {
 		count_a[count] = str[len_b];
-		len_b++;
 		count++;
+		len_b++;
 	} while (len_b <= len);
 	puts(count_a);
 }
