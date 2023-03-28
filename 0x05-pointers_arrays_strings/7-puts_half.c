@@ -12,8 +12,11 @@ void puts_half(char *str)
 {
 	int len;
 	int len_b;
+	char count_a[10000];
+	int count;
 
 	len = 0;
+	count = 0;
 	while (str[len] != '\0')
 	{
 		len++;
@@ -28,10 +31,12 @@ void puts_half(char *str)
 		len_b = len / 2;
 	}
 
+
 	do {
-		printf("%c", str[len_b]);
+		count_a[count] = str[len_b];
 		len_b++;
+		count++;
 	} while (len_b <= len);
-	printf("\n");
+	puts(count_a);
 }
 
