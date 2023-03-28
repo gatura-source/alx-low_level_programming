@@ -16,7 +16,6 @@ void puts_half(char *str)
 	int len_b;
 	char count_a[10000];
 	int count;
-	int len_c;
 
 	len = 0;
 	count = 0;
@@ -25,7 +24,6 @@ void puts_half(char *str)
 		len++;
 	}
 
-	len_c = strlen(str);
 	/*printf("%d\n", len_c);
 	printf("%d\n", len);*/
 
