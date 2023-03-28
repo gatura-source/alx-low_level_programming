@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
+#include <math.h>
 
 /**
  * puts_half - prints half of string
@@ -14,6 +16,7 @@ void puts_half(char *str)
 	int len_b;
 	char count_a[10000];
 	int count;
+	int len_c;
 
 	len = 0;
 	count = 0;
@@ -22,20 +25,25 @@ void puts_half(char *str)
 		len++;
 	}
 
+	len_c = strlen(str);
+	/*printf("%d\n", len_c);
+	printf("%d\n", len);*/
+
 	if (len % 2 != 0)
 	{
-		len_b = (len - 1) / 2;
+		len_b = round((len - 1) / 2) + 1;
 	}
-	else
+	else if (len % 2 == 0)
 	{
 		len_b = len / 2;
 	}
 
 
 	do {
+		/*printf("len_b : %d ---- count : %d\n", len_b, count);*/
 		count_a[count] = str[len_b];
-		count++;
 		len_b++;
+		count++;
 	} while (len_b <= len);
 	puts(count_a);
 }

@@ -4,7 +4,7 @@ int main(void)
 {
 	char *str;
 
-	str = "0123456789";
+	str = "Lorem!";
 
 	puts_half(str);
 
