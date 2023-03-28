@@ -12,26 +12,23 @@
 void print_rev(char *s)
 {
 	int len;
+	char two[10000];
 	int count;
-	int end;
-
-	len = 0;
+	int begin;
 
 	while (s[len] != '\0')
 	{
 		len++;
 	}
-	
-	char str[len];
 
+	count = len - 1;
 
-	end = len - 1;
-
-	for (count = 0; count < len; count++)
+	for (begin = 0; begin < len; begin++)
 	{
-		str[count] = s[end];
-		end--;
+		two[begin] = s[count];
+		count--;
 	}
-	str[count] = '\0';
-	puts(str);
+	two[begin] = '\0';
+
+	puts(two);
 }
