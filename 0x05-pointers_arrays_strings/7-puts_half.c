@@ -40,9 +40,6 @@ void puts_half(char *str)
 
 
 	do {
-		/*
-		 * printf("len_b : %d ---- count : %d\n", len_b, count);
-		 * */
 		count_a[count] = str[len_b];
 		len_b++;
 		count++;
