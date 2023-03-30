@@ -41,7 +41,7 @@ char *cap_string(char *s)
 		for (j = 97; j < 123; j++)
 		{
 			b = char_to_int(s[i]);
-			if (b == 32)
+			if ((b == 32 || s[i] == '\n' || b == 46) && (s[i + 1] == j))
 			{
 				s[i + 1] = toupper(s[i + 1]);
 			}
