@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <ctype.h>
+#include <stdio.h>
 /**
  * checkchar_int - returns int version of a char
  * @c: int of char
@@ -27,9 +28,14 @@ char *string_toupper(char *a)
 	int j;
 	int b;
 
-	len = sizeof(a);
+	len = 0;
+	while (a[len] != '\0')
+	{
+		len++;
+	}
+	printf("length is %ld\n", len);
 
-	for (i = 0; i < len && a[i] != '\0'; i++)
+	for (i = 0; i < len; i++)
 	{
 		for (j = 97; j < 123; j++)
 		{
