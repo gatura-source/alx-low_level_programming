@@ -28,17 +28,17 @@ bool in(int element)
 	int i;
 	int t;
 
-	ascii_codes[0] = 34;
-	ascii_codes[1] = 40;
-	ascii_codes[2] = 41;
-	ascii_codes[3] = 44;
-	ascii_codes[4] = 46;
+	ascii_codes[0] = 32;
+	ascii_codes[1] = 44;
+	ascii_codes[2] = 59;
+	ascii_codes[3] = 46;
+	ascii_codes[4] = 21;
 	ascii_codes[5] = 63;
-	ascii_codes[6] = 33;
-	ascii_codes[7] = 123;
-	ascii_codes[8] = 125;
-	ascii_codes[9] = 59;
-	ascii_codes[10] = 32;
+	ascii_codes[6] = 34;
+	ascii_codes[7] = 40;
+	ascii_codes[8] = 41;
+	ascii_codes[9] = 123;
+	ascii_codes[10] = 125;
 
 	for (i = 0; i < 11; i++)
 	{
