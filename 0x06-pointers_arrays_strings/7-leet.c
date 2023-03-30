@@ -1,21 +1,25 @@
-#include "main.h"
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include "main."
 /**
  * leet - encodes string
  * @s: string input
  *
- * Return: void
+ * Return: pointer
  */
-
 char *leet(char *s)
 {
-	size_t len;
-	size_t i;
+	char *r = s;
+	char a[] = { 'a', 'e', 'o', 't', 'l' };
+	char n[] = { 4, 3, 0, 7, 1 };
+	int i = 0;
 
-	len = strlen(s);
-
-	do {
-		s[i] = 
+	while (*s)
+	{
+		for (i = 0; i < 5; i++)
+		{
+			if (*s == a[i] || *s == a[i] - 32)
+				*s = n[i] + '0';
+		}
+		s++;
+	}
+	return (r);
 }
