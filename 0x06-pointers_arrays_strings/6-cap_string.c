@@ -24,7 +24,7 @@ int char_to_int(int c)
 
 bool in(int element)
 {
-	int ascii_codes[10];
+	int ascii_codes[11];
 	int i;
 	int t;
 
@@ -38,8 +38,9 @@ bool in(int element)
 	ascii_codes[7] = 123;
 	ascii_codes[8] = 125;
 	ascii_codes[9] = 59;
+	ascii_codes[10] = 32;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 11; i++)
 	{
 		if (ascii_codes[i] == element)
 		{
