@@ -2,10 +2,12 @@
 #include <string.h>
 
 /**
- * _strncpy - works exacty like strcpy
+ * _strncpy - works exacty like strncpy
  * @dest: dest input
  * @src: src input
- * n: chars to be copied
+ * @n: chars to be copied
+ *
+ * Return: pointers to dest
  */
 
 char *_strncpy(char *dest, char *src, int n)
