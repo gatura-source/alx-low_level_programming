@@ -29,7 +29,7 @@ char *string_toupper(char *a)
 
 	len = sizeof(a);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len && a[i] != '\0'; i++)
 	{
 		for (j = 97; j < 123; j++)
 		{
@@ -38,10 +38,6 @@ char *string_toupper(char *a)
 			if (b  == j)
 			{
 				a[i] = toupper(a[i]);
-			}
-			else
-			{
-				;
 			}
 		}
 	}
