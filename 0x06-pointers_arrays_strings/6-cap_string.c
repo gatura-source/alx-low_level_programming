@@ -34,7 +34,7 @@ bool in(int element)
 	ascii_codes[3] = 44;
 	ascii_codes[4] = 46;
 	ascii_codes[5] = 63;
-	ascii_codes[6] = 21;
+	ascii_codes[6] = 33;
 	ascii_codes[7] = 123;
 	ascii_codes[8] = 125;
 	ascii_codes[9] = 59;
