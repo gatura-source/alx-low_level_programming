@@ -84,7 +84,7 @@ char *cap_string(char *s)
 		{
 			b = char_to_int(s[i]);
 			t = in(b);
-			if ((s[i] == '\n' || s[i] == '\t' || t == true) && (s[i + 1] == j))
+			if ((s[i] == '\n' || s[i] == '\t' || t == true))
 			{
 				s[i + 1] = toupper(s[i + 1]);
 			}
