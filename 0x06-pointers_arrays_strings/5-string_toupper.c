@@ -39,7 +39,7 @@ char *string_toupper(char *a)
 		{
 			b = checkchar_int(a[i]);
 
-			if (b  == j)
+			if (b == j )
 			{
 				a[i] = toupper(a[i]);
 			}
