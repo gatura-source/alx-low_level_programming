@@ -1,0 +1,25 @@
+#include "main.h"
+#include <stdlib.h>
+/**
+ * _strchr - locates first occurence of char input
+ * @s: string input
+ * @c: char  input
+ *
+ * Return: pointer to c
+ */
+
+char *_strchr(char *s, char c)
+{
+	size_t len;
+	size_t i;
+
+	i = 0;
+
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+}
+
+
+
