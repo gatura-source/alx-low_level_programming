@@ -30,13 +30,17 @@ unsigned int _strspn(char *s, char *accept)
 		len_b++;
 	}
 
-	for (i = 0; i <= len_a; i++)
+	for (i = 0; i <= len_b; i++)
 	{
-		for (j = 0; j <= len_b; j++)
+		for (j = 0; j <= len_a; j++)
 		{
-			if (s[j] == accept[i])
+			if (s[i] == accept[j])
 			{
 				len_c++;
+			}
+			else
+			{
+				;
 			}
 		}
 	}
