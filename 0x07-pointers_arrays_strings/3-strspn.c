@@ -38,10 +38,6 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				len_c++;
 			}
-			else
-			{
-				;
-			}
 		}
 	}
 
