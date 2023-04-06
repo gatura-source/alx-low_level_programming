@@ -1,0 +1,22 @@
+#include "main.h"
+
+/**
+ * _sqrt_recursion - returns sqrt of a number
+ * @n: int input
+ *
+ * Return: int
+ */
+
+int _sqrt_recursion(int n)
+{
+	int a;
+
+	a = 1;
+
+	if (a * a <= n && n > 0)
+	{
+		a++;
+		return (a);
+		_sqrt_recursion(a);
+	}
+}
