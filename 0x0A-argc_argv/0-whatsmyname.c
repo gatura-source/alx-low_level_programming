@@ -10,7 +10,10 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	while (--argc == 0)
+	{
+		printf("%s\n", argv[argc]);
+	}
 
 	return (0);
 }
