@@ -16,18 +16,37 @@ bool ischar (int c)
 
 	flag = 0;
 
-	for (i = 58; i < 127; i++)
+	if ( c >= 58)
 	{
-		if (i == c)
+		for (i = 58; i < 127; i++)
 		{
-			flag = true;
-			return (true);
-		}
-		else
-		{
-			;
+			if (i == c)
+			{
+				flag = true;
+				return (true);
+			}
+			else
+			{
+				;
+			}
 		}
 	}
+	else
+	{
+		for (i = 33; i < 48; i++)
+		{
+			if ( i == c)
+			{
+				flag = true;
+				return (flag);
+			}
+			else
+			{
+				;
+			}
+		}
+	}
+
 
 	return (flag);
 }
