@@ -47,15 +47,13 @@ int main(int argc, char *argv[])
 
 	i = 0;
 
+
 	if (argc > 1)
 	{
 		for (j = 1; j < argc; j++)
 		{
 			f = ischar(*argv[j]);
-			/**
-			*printf("bool value is %d\n", f);
-			*printf("Value is %d\n", *argv[j]);
-			**/
+
 			if (f == false)
 			{
 				i += atoi(argv[j]);
@@ -67,6 +65,11 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
+	else
+	{
+		;
+	}
+
 	printf("%d\n", i);
 
 	return (0);
