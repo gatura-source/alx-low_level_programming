@@ -2,30 +2,22 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-/**
- * ischar - checks if input is char
- * @c: char input
- *
- * Return: false, otherwise true
- */
-
 bool ischar (int c)
 {
 	int i;
 	bool flag;
 
-	flag = 0;
+	flag = false;
 
 	for (i = 58; i < 127; i++)
 	{
-		if (i == c)
+		if (c == i)
 		{
 			flag = true;
-			return (true);
 		}
 		else
 		{
-			;
+			flag = false;
 		}
 	}
 
@@ -43,7 +35,6 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int j;
-	bool f;
 
 	i = 0;
 
@@ -51,16 +42,13 @@ int main(int argc, char *argv[])
 	{
 		for (j = 1; j < argc; j++)
 		{
+			bool f;
 			f = ischar(*argv[j]);
-			/**
-			*printf("bool value is %d\n", f);
-			*printf("Value is %d\n", *argv[j]);
-			**/
-			if (f == false)
+			if (atoi(argv[j]) > 0 && f == false)
 			{
 				i += atoi(argv[j]);
 			}
-			else if (f == true)
+			else
 			{
 				printf("Error\n");
 				return (1);
