@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		for (j = 1; j < argc; j++)
 		{
-			if (atol(argv[j]) > 0)
+			if (atol(argv[j]) >= 0)
 			{
 				i += atol(argv[j]);
 			}
