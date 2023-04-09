@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * main - entry point
  * @argc: args count
@@ -16,8 +16,8 @@ int main(int argc, char *argv[])
 
 	if (argc > 2)
 	{
-		a = *argv[1] - '0';
-		b = *argv[2] - '0';
+		a = atol(argv[1]);
+		b = atol(argv[2]);
 		r = a * b;
 		printf("%d\n", r);
 	}
