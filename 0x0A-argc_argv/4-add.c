@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
 			{
 				i += atoi(argv[j]);
 			}
-			else if (f == true)
+			else
 			{
 				printf("Error\n");
 				return (1);
