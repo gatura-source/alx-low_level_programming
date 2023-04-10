@@ -16,7 +16,7 @@ bool ischar (int c)
 
 	flag = 0;
 
-	if ( c >= 58)
+	if (c >= 58)
 	{
 		for (i = 58; i < 127; i++)
 		{
@@ -35,7 +35,7 @@ bool ischar (int c)
 	{
 		for (i = 33; i < 48; i++)
 		{
-			if ( i == c)
+			if (i == c)
 			{
 				flag = true;
 				return (flag);
