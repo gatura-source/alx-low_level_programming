@@ -22,13 +22,16 @@ char *str_concat(char *s1, char *s2)
 	{
 		p += 0;
 	}
-	else if (s2 == NULL)
+	else
+	{
+		p += strlen(s1);
+	}
+	if (s2 == NULL)
 	{
 		p += 0;
 	}
 	else
 	{
-		p += strlen(s1); 
 		p += strlen(s2);
 	}
 
