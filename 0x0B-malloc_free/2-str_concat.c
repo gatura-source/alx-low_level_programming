@@ -4,27 +4,48 @@
 #include <string.h>
 #include <stdbool.h>
 /**
- * nul_check - checks if string is null
- * @c: string stnput
+ * concat - does the heavy lifting
+ * @ptr: pointer
+ * @ptrarray: array containing s1 and s2
  *
- * Returns: false, true otherwise
+ * Return: pointer
  */
-bool nul_check (char *c)
+char *concat(char *ptr, char *ptrarray[])
 {
-	bool check;
+	size_t i;
+	size_t j;
 
-	check = false
-	if (c == NULL)
+	for (i = 0; i < 2; i++)
 	{
-		check = true;
+		if (ptrarray[i] == NULL)
+		{
+			;
+		}
+		else if ((i == 0) && (ptrarray[i] != NULL))
+		{
+			for (j = 0; j < strlen(ptrarray[i]); j++)
+			{
+				ptr[j] = (ptrarray[i])[j];
+			}
+		}
+		else if ((i == 1) && (ptrarray[i] != NULL) && (ptrarray[i - 1] != NULL))
+		{
+			for (j = 0; j < strlen(ptrarray[i]); j++)
+			{
+				ptr[j + strlen(ptrarray[i - 1])] = (ptrarray[i])[j];
+			}
+		}
+		else
+		{
+			for (j = 0; j < strlen(ptrarray[i]); j++)
+			{
+				ptr[j] = (ptrarray[i])[j];
+			}
+		}
 	}
-	else
-	{
-		;
-	}
-
-	return (check);
+	return (ptr);
 }
+
 /**
  * str_concat - adds twos strings up
  * @s1: string one
@@ -32,22 +53,26 @@ bool nul_check (char *c)
  *
  * Return: pointer to new string
  */
-
-char *str_concat(char *s1, char *s2);
+char *str_concat(char *s1, char *s2)
 {
 	size_t p;
 	char *ptr;
-	char strs[2];
-	size_t i
+	char *pt_r;
+	size_t i;
+	char *ptrarray[2];
 
-	strs[0] = s1;
-	strs[1] = s2;
-
-	for (i = 0; i < 2; i++)
+	p = 0;
+	ptrarray[0] = s1;
+	ptrarray[1] = s2;
+	for (i = 0; i <  2; i++)
 	{
-		if (!nul_check(strs[i]))
+		if (ptrarray[i] == NULL)
 		{
-			p += strlen(strs[i]);
+			p += 0;
+		}
+		else
+		{
+			p += strlen(ptrarray[i]);
 		}
 	}
 	ptr = malloc(p + 1);
@@ -57,24 +82,7 @@ char *str_concat(char *s1, char *s2);
 	}
 	else
 	{
-		for (i = 0; i < 2; i++)
-		{
-			if (!nul_check(strs[i]))
-			{
-				for (j = 0; j < strlen(strs[i]); j++)
-				{
-					ptr[j] = strs[i][j];
-				}
-			}
-			else if(!nul_check(strs[i]) && (i == 1) && (!nul_check(s[i - 1])))
-			{
-				for (j = 0; j < strlen(strs[i]); j++)
-				{
-					ptr[strlen + j] = strs[i][j];
-				}
-			}
-		}
+		pt_r = concat(ptr, ptrarray);
 	}
-	return (ptr)
+	return (pt_r);
 }
-
