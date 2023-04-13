@@ -40,7 +40,14 @@ char *concat(char *ptr, char *ptrarray[], size_t n)
 			;
 		}
 	}
-	return (ptr);
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		return (ptr);
+	}
 }
 /**
  * string_nconcat - adds twos strings up
@@ -88,13 +95,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 	{
 		pt_r = concat(ptr, ptrarray, n);
-		if (pt_r == NULL)
-		{
-			return (NULL);
-		}
-		else
-		{
-			return (pt_r);
-		}
 	}
+	return (pt_r);
 }
