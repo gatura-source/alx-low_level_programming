@@ -60,7 +60,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *pt_r;
 	size_t i;
 	char *ptrarray[2];
-	
+
 	p = 0;
 	ptrarray[0] = s1;
 	ptrarray[1] = s2;
