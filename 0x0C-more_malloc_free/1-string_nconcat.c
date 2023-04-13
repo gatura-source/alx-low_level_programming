@@ -61,13 +61,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	size_t i;
 	char *ptrarray[2];
 	
-	if (n >= strlen(s2))
-	{
-		n = strlen(s2);
-	}
-	{
-		;
-	}
 	p = 0;
 	ptrarray[0] = s1;
 	ptrarray[1] = s2;
