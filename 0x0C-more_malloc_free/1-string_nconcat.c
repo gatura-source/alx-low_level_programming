@@ -43,7 +43,14 @@ char *concat(char *ptr, char *ptrarray[], size_t n)
 			}
 		}
 	}
-	return (ptr);
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		return (ptr);
+	}
 }
 /**
  * string_nconcat - adds twos strings up
