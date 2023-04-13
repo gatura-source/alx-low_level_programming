@@ -37,10 +37,7 @@ char *concat(char *ptr, char *ptrarray[], size_t n)
 		}
 		else
 		{
-			for (j = 0; j < strlen(ptrarray[i]); j++)
-			{
-				ptr[j] = (ptrarray[i])[j];
-			}
+			;
 		}
 	}
 	return (ptr);
@@ -61,6 +58,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	size_t i;
 	char *ptrarray[2];
 
+	if (n >= strlen(s2))
+	{
+		n = strlen(s2);	
+	}
+	else
+	{
+		;
+	}
 	p = 0;
 	ptrarray[0] = s1;
 	ptrarray[1] = s2;
@@ -83,6 +88,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 	{
 		pt_r = concat(ptr, ptrarray, n);
+		if (pt_r == NULL)
+		{
+			return (NULL);
+		}
+		else
+		{
+			return (pt_r);
+		}
 	}
-	return (pt_r);
 }
