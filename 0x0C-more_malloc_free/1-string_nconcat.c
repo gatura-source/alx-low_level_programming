@@ -14,15 +14,16 @@ char *concat(char *ptr, char *ptrarray[], size_t n)
 {
 	size_t i;
 	size_t j;
-	
-	if (n >= strlen(ptrarray[1]))
-	{
-		n = strlen(ptrarray[1]);
-	}
-	else
-	{
-		;
-	}
+	/*
+	*if (n >= strlen(ptrarray[1]) && ptrarray[1] != NULL)
+	*{
+	*	n = strlen(ptrarray[1]);
+	*}
+	*else
+	*{
+	*	;
+	*}
+	*/
 	for (i = 0; i < 2; i++)
 	{
 		if (ptrarray[i] == NULL)
