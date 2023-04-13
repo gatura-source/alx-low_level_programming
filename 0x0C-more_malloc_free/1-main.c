@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 /**
  * main - check the code
  *
@@ -11,7 +12,7 @@ int main(void)
 {
     char *concat;
 
-    concat = string_nconcat("Gatura", "HHHHHHHHHHHHHHHHHHHHHHHHH", 10000);
+    concat = string_nconcat(NULL, NULL, 2147483647);
     printf("%s\n", concat);
     printf("%ld\n", strlen(concat));
     free(concat);

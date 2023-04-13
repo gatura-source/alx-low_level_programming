@@ -1,53 +1,38 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
+#include <stdio.h>
 /**
- * concat - does the heavy lifting
- * @ptr: pointer
- * @ptrarray: array containing s1 and s2
+ * concat - does the real concatenation
+ * @ptr: pointer to mem of concatenation
+ * @ptrarray: array cont. strings
  * @n: bytes to copy
+ *
  * Return: pointer
  */
 char *concat(char *ptr, char *ptrarray[], size_t n)
 {
-	size_t i;
-	size_t j;
+	unsigned int i;
+	unsigned int j;
 
 	for (i = 0; i < 2; i++)
 	{
-		if (ptrarray[i] == NULL)
-		{
-			;
-		}
-		else if ((i == 0) && (ptrarray[i] != NULL))
+		if (i == 0)
 		{
 			for (j = 0; j < strlen(ptrarray[i]); j++)
 			{
 				ptr[j] = (ptrarray[i])[j];
 			}
 		}
-		else if ((i == 1) && (ptrarray[i] != NULL) && (ptrarray[i - 1] != NULL))
+		if (i == 1)
 		{
 			for (j = 0; j < n; j++)
 			{
-				ptr[j + strlen(ptrarray[i - 1])] = (ptrarray[i])[j];
+				ptr[strlen(ptrarray[i - 1]) + j] = (ptrarray[i])[j];
 			}
 		}
-		else
-		{
-			;
-		}
 	}
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
-	else
-	{
-		return (ptr);
-	}
+	return (ptr);
 }
 /**
  * string_nconcat - adds twos strings up
@@ -59,34 +44,41 @@ char *concat(char *ptr, char *ptrarray[], size_t n)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	size_t p;
 	char *ptr;
-	char *pt_r;
-	size_t i;
+	size_t len_1;
+	size_t len_2;
+	char *ptr_2;
 	char *ptrarray[2];
 
-	p = 0;
-	ptrarray[0] = s1;
-	ptrarray[1] = s2;
-	for (i = 0; i <  2; i++)
+	len_1 = 0;
+	len_2 = 0;
+	if (s1 == NULL)
 	{
-		if (ptrarray[i] != NULL && i == 0)
-		{
-			p += strlen(s1);
-		}
-		else if (ptrarray[i] != NULL && i == 1)
-		{
-			p += n;
-		}
+		s1 = "";
 	}
-	ptr = malloc(p + 1);
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	while (s1[len_1] != '\0')
+	{
+		len_1++;
+	}
+	while (s2[len_2] != '\0')
+	{
+		len_2++;
+	}
+	if (n >= len_2)
+	{
+		n = len_2;
+	}
+	ptr = malloc(n + 1 + len_1);
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	else
-	{
-		pt_r = concat(ptr, ptrarray, n);
-	}
-	return (pt_r);
+	ptrarray[0] = s1;
+	ptrarray[1] = s2;
+	ptr_2 = concat(ptr, ptrarray, n);
+	return (ptr_2);
 }
