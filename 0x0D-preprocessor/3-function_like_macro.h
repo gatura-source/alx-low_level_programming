@@ -1,8 +1,9 @@
 #ifndef FUNCTION_H
 #define FUNCTION_H
 
+#include <stdlib.h>
 #ifndef ABS
-#define ABS(N) ((N < 0) ? (-N) : (N))
+#define ABS abs
 #endif
 
 #endif
