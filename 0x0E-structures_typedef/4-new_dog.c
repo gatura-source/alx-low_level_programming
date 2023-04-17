@@ -17,21 +17,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *snoop;
 
 	snoop = &dogg;
-	snoop->name = malloc(sizeof(char) * (strlen(name) + 1));
-	if (snoop->name == NULL)
-	{
-		free(snoop->name);
-		return (NULL);
-	}
+	snoop->name = malloc(strlen(name) + 1);
+	snoop->owner = malloc(strlen(owner) + 1);
 	snoop->name = strcpy(snoop->name, name);
+	snoop->owner = strcpy(snoop->owner, owner);
 	snoop->age = age;
-	snoop->owner = malloc(sizeof(char) * (strlen(owner) + 1));
-	if (snoop->owner == NULL)
+
+	if (snoop->name == NULL || snoop->owner == NULL)
 	{
-		free(snoop->owner);
 		return (NULL);
 	}
-	snoop->owner = strcpy(snoop->owner, owner);
-	return (snoop);
-
+	else
+	{
+		return (snoop);
+	}
 }
