@@ -2,7 +2,7 @@
 #define FUNCTION_H
 
 #ifndef ABS
-#define ABS(N) ((N < 0) ? (-N) : (N))
+#define ABS(a) (((a) < 0) ? -(a) : (x));
 #endif
 
 #endif
