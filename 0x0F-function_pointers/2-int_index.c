@@ -28,11 +28,11 @@ int int_index(int *array, int size, int (*cmp)(int))
 				{
 					return (iter);
 				}
-				else
-				{
-					return (-1);
-				}
 				iter++;
+			}
+			if (ret == false)
+			{
+				return (-1);
 			}
 		}
 		else
