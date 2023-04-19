@@ -7,6 +7,7 @@
  * @array: array input
  * @size: array size
  * @cmp: function used to compare values
+ * Return: elem if matches or -1 on failure
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
