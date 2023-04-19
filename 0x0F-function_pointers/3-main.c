@@ -17,32 +17,19 @@ int main(int argc, char *argv[])
 		int (*func)(int, int);
 
 		func = get_op_func(argv[2]);
-		if ((func != NULL) && (*argv[2] == '+' || *argv[2] == '-'))
+		if (func != NULL)
 		{
 			printf("%d\n", func(atoi(argv[1]), atoi(argv[3])));
-		}
-		else if ((func != NULL) && (*argv[2] == '/' || *argv[2] == '%'))
-		{
-			if (atoi(argv[3]) == 0)
-			{
-				printf("Error\n");
-				exit(100);
-			}
-			else if (argv[3] != 0)
-			{
-				printf("%d\n", func(atoi(argv[1]), atoi(argv[3])));
-			}
 		}
 		else
 		{
 			printf("Error\n");
 			exit(99);
 		}
-
 	}
 	else
 	{
-		printf("Error\n");
+		puts("Error\n");
 		exit(98);
 	}
 	return (0);
