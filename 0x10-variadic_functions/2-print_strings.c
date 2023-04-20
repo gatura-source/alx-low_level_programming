@@ -10,19 +10,26 @@
  * Return: void
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list args_ptr;
 	unsigned int i;
-	int elem;
+	char *string;
 
 	va_start(args_ptr, n);
 	if (n > 0)
 	{
 		for (i = 0; i < n; i++)
 		{
-			elem = va_arg(args_ptr, int);
-			printf("%d", elem);
+			string = va_arg(args_ptr, char *);
+			if (string != NULL)
+			{
+				printf("%s", va_arg(args_ptr, char *));
+			}
+			else
+			{
+				printf("nil");
+			}
 			if ((i != (n - 1)) && (separator != NULL))
 			{
 				printf("%s", separator);
