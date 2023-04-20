@@ -33,8 +33,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			}
 		}
 	}
-	else if ((n > 0) && (separator == NULL))
+	if ((separator == NULL) && (n > 0))
 	{
+		i = 0;
 		while (i < n)
 		{
 			elem = va_arg(args_ptr, int);
