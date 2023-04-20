@@ -3,10 +3,10 @@
 #include <stddef.h>
 
 /**
- * print_numbers - prints numbers (variadiv)
- * @separator: separates the nums
+ * print_strings - prints numbers (variadiv)
+ * @separator: separates the strings
  * @n: args counter for variadic functions
- * Description: variadic function that prints out all nums passed
+ * Description: variadic function that prints out all strings passed
  * Return: void
  */
 
@@ -24,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			string = va_arg(args_ptr, char *);
 			if (string != NULL)
 			{
-				printf("%s", va_arg(args_ptr, char *));
+				printf("%s", string);
 			}
 			else
 			{
