@@ -3,13 +3,13 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- * print_list - lists out a singly linked list
+ * list_len - len of a singly linked list
  * @h: singly linked list
  *
  * Return: size of a singly linked list
  */
 
-size_t print_list(const list_t *h)
+size_t list_len(const list_t *h)
 {
 	size_t listlen;
 
@@ -18,14 +18,6 @@ size_t print_list(const list_t *h)
 	{
 		while (h != NULL)
 		{
-			if (h->str != NULL)
-			{
-				printf("[%d] %s\n", h->len, h->str);
-			}
-			else
-			{
-				printf("[0] (nil)\n");
-			}
 			h = (h->next);
 			listlen++;
 		}
