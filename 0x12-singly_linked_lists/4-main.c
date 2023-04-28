@@ -7,7 +7,12 @@
  * main - check the code
  *
  * Return: Always 0.
+ * 
  */
+int _start(void)
+{
+	printf("HELLO");
+}
 int main(void)
 {
     list_t *head;
