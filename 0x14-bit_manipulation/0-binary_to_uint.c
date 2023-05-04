@@ -32,36 +32,26 @@ double power(double base, int expo)
 
 unsigned int binary_to_uint(const char *b)
 {
-	double ret;
+	unsigned int ret;
 	int i;
-	char j;
-	int k;
 
 	ret = 0;
 	i = 0;
 	if (b != NULL)
 	{
-		k = strlen(b) - 1;
-
 		while (b[i] != '\0')
 		{
-			j = b[i];
-			if (j == '1' || j == '0')
+			if (b[i] == '0' || b[i] == '1')
 			{
-				ret += power(2, k) * (j - '0');
-
+				ret = ret * 2 + (b[i] - '0');
 			}
 			else
 			{
 				return (0);
 			}
-			k--;
 			i++;
 		}
 	}
-	else
-	{
-		return (0);
-	}
+
 	return (ret);
 }
