@@ -39,9 +39,9 @@ unsigned int binary_to_uint(const char *b)
 
 	ret = 0;
 	i = 0;
-	k = strlen(b) - 1;
 	if (b != NULL)
 	{
+		k = strlen(b) - 1;
 
 		while (b[i] != '\0' && k >= 0)
 		{
@@ -58,6 +58,10 @@ unsigned int binary_to_uint(const char *b)
 			i++;
 			k--;
 		}
+	}
+	else
+	{
+		return (0);
 	}
 	return (ret);
 }
