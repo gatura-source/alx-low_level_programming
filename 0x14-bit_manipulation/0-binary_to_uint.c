@@ -43,7 +43,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		k = strlen(b) - 1;
 
-		while (b[i] != '\0' && k >= 0)
+		while (b[i] != '\0')
 		{
 			j = b[i];
 			if (j == '1' || j == '0')
@@ -55,8 +55,8 @@ unsigned int binary_to_uint(const char *b)
 			{
 				return (0);
 			}
-			i++;
 			k--;
+			i++;
 		}
 	}
 	else
