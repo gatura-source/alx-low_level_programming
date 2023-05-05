@@ -4,7 +4,7 @@
  * get_endianness - gets endianness of the machine
  *
  *
- * Return: int (1 if little endian) 
+ * Return: int (1 if little endian)
  */
 
 int get_endianness(void)
