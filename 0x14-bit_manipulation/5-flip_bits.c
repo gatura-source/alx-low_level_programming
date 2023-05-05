@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * flip_bits - a func returns a num of bits nedded to change from one num to another
- * @n: input 
+ * flip_bits - a func returns a num of bits needed to flip a num
+ * @n: input
  * @m: another input
  *
  * Return: bits needed to flip
