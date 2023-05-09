@@ -50,7 +50,7 @@ int create_file(const char *filename, char *text_content)
 			return (-1);
 		}
 	}
-	in_buffer = err_malloc(sizeof(char) * strlen(text_name));
+	in_buffer = err_malloc(sizeof(char) * strlen(text_content));
 	strcpy(in_buffer, text_content);
 	if (text_content == NULL)
 	{
