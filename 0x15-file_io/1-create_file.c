@@ -41,17 +41,25 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
+	fd = open(filename, O_CREAT | O_WRONLY | O_EXECL, S_IRUSR | S_IWUSR);
+	if (fd == -1)
+	{
+		fd = open(filename, O_TRUNC);
+		if (fd == -1)
+		{
+			return (-1);
+		}
+	}
 	in_buffer = err_malloc(sizeof(char) * strlen(text_content));
 	strcpy(in_buffer, text_content);
 	if (text_content == NULL)
 	{
-		bzero(in_buffer, strlen(in_buffer));
+		return (1);
+		exit(0);
 	}
 	if (write(fd, in_buffer, strlen(in_buffer)) == -1)
 	{
 		return (-1);
 	}
-
 	return (1);
 }
