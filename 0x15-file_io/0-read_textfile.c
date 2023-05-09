@@ -51,17 +51,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	buffer = e_malloc(sizeof(char) * letters);
 	ret = read(fd, buffer, letters);
-	buffer[letters] = '\0';
-	ret2 = write(1, buffer, ret);
+	if (ret == -1)
+	{
+		return (0);
+	}
+	ret2 = write(STDOUT_FILENO, buffer, ret);
 	if (ret2 != (ssize_t) ret)
 	{
 		return (0);
 	}
-	else
-	{
-		return (ret);
-	}
 	close(fd);
 	free(buffer);
+	return (ret);
 }
 
