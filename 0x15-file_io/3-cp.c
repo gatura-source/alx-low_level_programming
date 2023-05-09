@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 			buffout = err_malloc(sizeof(char) * 1024);
 			while ((byte_count = read(fdout, buffout, sizeof(buffout))) > 0)
 			{
-				if (write(fdin, buffout, strlen(buffout) == (size_t) -1))
+				if (write(fdin, buffout, byte_count) == (ssize_t) -1)
 				{
 					dprintf(STDERR_FILENO, "Can\'t write to %s\n", argv[2]);
 					exit(99);
@@ -71,7 +71,6 @@ int main(int argc, char *argv[])
 		else
 		{
 			dprintf(STDERR_FILENO, "Can't read from %s\n", argv[1]);
-			remove(argv[2]);
 			exit(98);
 		}
 		free(buffout);
