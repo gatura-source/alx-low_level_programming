@@ -52,14 +52,12 @@ int create_file(const char *filename, char *text_content)
 	}
 	in_buffer = err_malloc(sizeof(char) * strlen(text_content));
 	strcpy(in_buffer, text_content);
-	if (text_content == NULL)
+	if (text_content != NULL)
 	{
-		return (1);
-		exit(0);
-	}
-	if (write(fd, in_buffer, strlen(in_buffer)) == -1)
-	{
-		return (-1);
+		if (write(fd, in_buffer, strlen(in_buffer)) == -1)
+		{	
+			return (-1);
+		}
 	}
 	return (1);
 }
