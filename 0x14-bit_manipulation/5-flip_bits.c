@@ -16,10 +16,6 @@ unsigned int flip_bits(unsigned long int num1, unsigned long int num2)
 	x_res = num1 ^ num2;
 	count = 0;
 
-	if(x_res == 0)
-	{
-		return (0);
-	}
 	while (x_res != 0)
 	{
 		x_res &= x_res - 1;
