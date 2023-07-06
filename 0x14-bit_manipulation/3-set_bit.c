@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <limits.h>
 /**
  * set_bit - sets a bit at a given position
  * @n: Value
@@ -16,7 +16,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	size = sizeof(n) * 8 - 1;
 	_n = *n;
-	if (index <= size)
+	if (index < size && *n < ULONG_MAX)
 	{
 
 		mask = 1 << index;

@@ -16,7 +16,7 @@ int main(void)
     n = 0;
     set_bit(&n, 10);
     printf("%lu\n", n);
-    n = 98;
+    n = 888;
     set_bit(&n, 0);
     printf("%lu\n", n);
     return (0);
