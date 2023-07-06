@@ -7,7 +7,7 @@
  * Return:  if big endian, 0 if little endian
  */
 
-int get_endiannnes(void)
+int get_endianness(void)
 {
 	int num;
 	char *ptr;
