@@ -7,4 +7,5 @@ unsigned int binary_to_uint(const char *);
 int get_bit(unsigned long int, unsigned int);
 int set_bit(unsigned long int *n, unsigned int);
 int clear_bit(unsigned long int *n, unsigned int index);
+unsigned int flip_bits(unsigned long int, unsigned long int);
 #endif
