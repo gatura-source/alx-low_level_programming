@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
  * binary_to_uint - Converts binary to uint
  * @b: binary input
@@ -38,8 +36,4 @@ unsigned int binary_to_uint(const char *b)
 		exp *= 2;
 	}
 	return (ret);
-
 }
-
-
-
