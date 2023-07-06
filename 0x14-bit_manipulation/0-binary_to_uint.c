@@ -1,4 +1,6 @@
 #include "main.h"
+
+
 /**
  * binary_to_uint - Converts binary to uint
  * @b: binary input
@@ -16,7 +18,7 @@ unsigned int binary_to_uint(const char *b)
 	len = 0;
 	exp = 1;
 	ret = 0;
-	if (b == '\0')
+	if (*b == '\0')
 	{
 		return (0);
 	}
