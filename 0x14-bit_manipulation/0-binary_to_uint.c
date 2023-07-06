@@ -5,7 +5,6 @@
  * binary_to_uint - Converts binary to uint
  * @b: binary input
  *
- *
  * Return: 0 or uint
  */
 
