@@ -45,7 +45,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	buffer = (char *)err_malloc(sizeof(char) * letters + 1);
+	buffer = (char *)err_malloc(sizeof(char) * letters);
 	readbytes = read(fd, buffer, letters);
 	if (readbytes == -1)
 	{
