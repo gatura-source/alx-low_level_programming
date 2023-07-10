@@ -42,16 +42,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
+		close(fd);
 		return (0);
 	}
 	buffer = (char *)err_malloc(sizeof(char) * letters + 1);
 	readbytes = read(fd, buffer, letters);
 	if (readbytes == -1)
 	{
+		close(fd);
+		free(buffer);
 		return (0);
 	}
 	if (write(STDOUT_FILENO, buffer, letters) != (ssize_t)letters)
 	{
+		close(fd);
+		free(buffer);
 		return (0);
 	}
 	free(buffer);
