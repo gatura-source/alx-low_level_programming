@@ -53,7 +53,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buffer);
 		return (0);
 	}
-	if (write(STDOUT_FILENO, buffer, letters) != (ssize_t)letters)
+	if (write(STDOUT_FILENO, buffer, letters) != (ssize_t)letters || write(STDOUT_FILENO, buffer, letters) == -1)
 	{
 		close(fd);
 		free(buffer);
