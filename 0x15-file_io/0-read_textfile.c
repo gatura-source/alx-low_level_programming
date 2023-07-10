@@ -1,7 +1,7 @@
 
 /**
  * err_malloc - error-checked malloc
- * @size: size for mem allocation
+ * @memsize: size for mem allocation
  *
  * Return: pointer or NULL
  */
@@ -11,14 +11,14 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
-void *err_malloc(size_t size)
+void *err_malloc(size_t memsize)
 {
 	void *ptr;
 
-	ptr = malloc(size);
+	ptr = malloc(memsize);
 	if (ptr == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 	return (ptr);
 }
@@ -34,6 +34,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t readbytes;
 	int fd;
 	char *buffer;
+	ssize_t return_bytes;
 
 	if (filename == NULL || letters == 0)
 	{
@@ -53,7 +54,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buffer);
 		return (0);
 	}
-	if (write(STDOUT_FILENO, buffer, letters) != (ssize_t)letters || write(STDOUT_FILENO, buffer, letters) == -1)
+	return_bytes = write(STDOUT_FILENO, buffer, letters);
+	if (return_bytes != (ssize_t)letters || return_bytes == -1)
 	{
 		close(fd);
 		free(buffer);
