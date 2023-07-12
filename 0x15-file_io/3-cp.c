@@ -43,7 +43,6 @@ int main(int argc, char *argv[])
 	size_t read_bytes;
 
 	source_buffer = (char *)mem_alloc(sizeof(char) * 1024);
-	mode = 0664;
 	if (argc != 3)
 	{
 		usage();
