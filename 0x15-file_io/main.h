@@ -6,9 +6,13 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 ssize_t read_textfile(const char *, size_t);
 void *err_malloc(size_t);
 int create_file(const char *, char *);
 int append_text_to_file(const char *, char *);
+int cp(const char *, const char *);
+void *mem_alloc(size_t);
+
 #endif
