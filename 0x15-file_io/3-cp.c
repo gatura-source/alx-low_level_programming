@@ -39,7 +39,8 @@ int main(int argc, char *argv[])
 	int fd;
 	int fd2;
 	char *source_buffer;
-	int mode = S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH;
+	mode_t mode = S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH;
+	size_t read_bytes;
 
 	source_buffer = (char *)mem_alloc(sizeof(char) * 1024);
 	mode = 0664;
@@ -54,10 +55,12 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fd2 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, mode);
-	while (read(fd, source_buffer, 1024) == 1)
+	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, mode);
+	read_bytes = 1;
+	while (read_bytes)
 	{
-		if (write(fd2, source_buffer, 1024) == -1)
+		read_bytes = read(fd, source_buffer, 1024);
+		if (write(fd2, source_buffer, read_bytes) == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
